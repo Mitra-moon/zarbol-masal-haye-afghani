@@ -1,0 +1,192 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #FAEBFF;
+  color: #333D79;
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+}
+
+/* Header */
+header {
+  background-color: #333D79;
+  color: #FAEBFF;
+  padding: 20px 0;
+  text-align: center;
+  border-bottom: 5px solid #FAEBFF;
+}
+
+header h1 {
+  font-size: 2em;
+  margin-bottom: 5px;
+}
+
+header p {
+  font-size: 1em;
+  opacity: 0.9;
+}
+
+/* Navigation Bar */
+nav {
+  background-color: #333D79;
+  padding: 10px 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #FAEBFF;
+  font-weight: bold;
+  padding: 5px 10px;
+  transition: background 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #FAEBFF;
+  color: #333D79;
+  border-radius: 5px;
+}
+
+/* Main Content */
+main {
+  padding: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Section Titles */
+h2 {
+  margin-top: 40px;
+  margin-bottom: 15px;
+  font-size: 1.6em;
+  color: #333D79;
+}
+
+/* Proverb Cards */
+.proverb-card {
+  background-color: white;
+  border: 2px solid #333D79;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 6px #ccc;
+}
+
+/* Input and Buttons */
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #333D79;
+  border-radius: 5px;
+}
+
+button,
+input[type="submit"] {
+  background-color: #333D79;
+  color: #FAEBFF;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background-color: #FAEBFF;
+  color: #333D79;
+  border: 2px solid #333D79;
+}
+
+/* Footer */
+footer {
+  background-color: #333D79;
+  color: #FAEBFF;
+  text-align: center;
+  padding: 15px;
+  margin-top: 50px;
+  font-size: 0.9em;
+}
+
+/* Fade Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.proverb-card {
+  /* Existing styles... */
+  animation: fadeIn 1s ease-in-out;
+}
+
+
+/* Slide Animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.proverb-grid-section {
+  animation: slideIn 1s ease-in-out;
+}
+
+
+/* Slide-in for each proverb card */
+.proverb-card {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideInCard 0.8s ease forwards;
+}
+
+/* Animation keyframes */
+@keyframes slideInCard {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Delay each card (optional) */
+.proverb-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.proverb-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.proverb-card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.proverb-card:nth-child(4) {
+  animation-delay: 0.8s;
+}
